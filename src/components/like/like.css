@@ -1,0 +1,24 @@
+.heart{
+    width: 20px;
+    height: 20px;
+}
+.liked-heart{
+    color:red
+}
+.heart:hover{
+    color:red
+}
+.btn{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    cursor: pointer;
+}
+.liked-btn{
+    color:red
+}
+.btn:hover{
+    color:red
+}
+
