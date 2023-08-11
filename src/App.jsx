@@ -1,5 +1,6 @@
 import "./App.css";
-import Table from "./components/generatetable/Table";
+import Counter from "./components/undoablecounter/Counter";
+// import Table from "./components/generatetable/Table";
 // import Like from "./components/like/Like";
 // import Star from "./components/star-rating/Star";
 
@@ -8,7 +9,8 @@ function App() {
     <>
       {/* <Star /> */}
       {/* <Like /> */}
-      <Table />
+      {/* <Table /> */}
+      <Counter />
     </>
   );
 }
