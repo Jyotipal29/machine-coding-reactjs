@@ -1,0 +1,21 @@
+.container{
+    margin: 100px auto;
+    display: flex;
+max-width: 500px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+.wrap input {
+padding: 10px;
+width:200px;
+margin-top: 5px;
+}
+.wrap button {
+padding: 10px;
+width:200px;
+margin:10px;
+}
+

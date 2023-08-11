@@ -1,12 +1,14 @@
 import "./App.css";
-import Like from "./components/like/Like";
+import Table from "./components/generatetable/Table";
+// import Like from "./components/like/Like";
 // import Star from "./components/star-rating/Star";
 
 function App() {
   return (
     <>
       {/* <Star /> */}
-      <Like />
+      {/* <Like /> */}
+      <Table />
     </>
   );
 }
