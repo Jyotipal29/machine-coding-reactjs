@@ -1,0 +1,11 @@
+.acc{
+    border:1px solid gray;
+    padding: 5px 10px;
+/* display: flex; */
+}
+.acc button{
+
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
