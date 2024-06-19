@@ -1,0 +1,20 @@
+// debounce waits untill a set period of time for example 1 sec before calling the function 
+/* 
+  const updateDebounceText = debounce((text)=>{
+  debounceText.textContent = text
+  })
+
+  updateDebounceText(e.target.value)
+  function debounce(cb, delay = 1000) {
+    let timout;
+    return (...args) => {
+      clearTimeout(timout);
+      timout = setTimeout(() => {
+        cb(...args);
+      }, delay);
+    };
+  }
+  */
+
+
+  // so a debounce function takes a cb and a delay and it returns a function 
