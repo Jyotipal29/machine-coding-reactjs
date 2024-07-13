@@ -16,16 +16,22 @@ import Loader from "./components/loader/Loader";
 import Accordian from "./components/accordian/Accordian";
 import Carausel from "./components/carausel/Carausel";
 import Model from "./components/model/Model";
-import Input from "./components/input/Input";
-import List from "./components/list/List";
+// import Input from "./components/input/Input";
+// import List from "./components/list/List";
 import Counter from "./components/undoablecounter/Counter";
 import Table from "./components/generatetable/Table";
-import Like from "./components/like/Like";
+// import Like from "./components/like/Like";
 import Star from "./components/star-rating/Star";
 
 import Debounce from "./components/debounce/Debounce";
-import Real from "./components/debounce/Real";
-import componentList from "./pages/card";
+// import Real from "./components/debounce/Real";
+// import componentList from "./pages/card";
+import Folder from "./components/folderstructure";
+import TicTacToe from "./components/tictactoe";
+import SearchFilterPagination from "./components/sort-filter-pagination";
+import ProgressBar from "./components/progressbar/index";
+import DragAndDrop from "./components/draganddrop/index";
+import Like from "./components/likebutton/index";
 function App() {
   return (
     <>
@@ -68,6 +74,16 @@ function App() {
           <Route exact path="/start-rating" element={<Star />} />
           <Route exact path="/tab" element={<Accordian />} />
           <Route exact path="/undo-counter" element={<Counter />} />
+          <Route exact path="/folder" element={<Folder />} />
+          <Route exact path="/tic" element={<TicTacToe />} />
+          <Route exact path="/ProgressBar" element={<ProgressBar />} />
+          <Route exact path="/DragAndDrop" element={<DragAndDrop />} />
+          <Route exact path="/Like" element={<Like />} />
+          <Route
+            exact
+            path="/SearchFilterPagination"
+            element={<SearchFilterPagination />}
+          />
         </Routes>
       </Router>
     </>

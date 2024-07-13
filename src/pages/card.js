@@ -60,6 +60,36 @@ const componentList = [
         name: "Undoable Counter",
         path: "/undo-counter"
     },
+    {
+        id: 13,
+        name: "Folder Structure",
+        path: "/folder"
+    },
+    {
+        id: 14,
+        name: "Tic Tac Toe",
+        path: "/tic"
+    },
+    {
+        id: 15,
+        name: "Search Filter Pagination",
+        path: "/SearchFilterPagination"
+    },
+    {
+        id: 16,
+        name: "ProgressBar",
+        path: "/ProgressBar"
+    },
+    {
+        id: 17,
+        name: "DragAndDrop",
+        path: "/DragAndDrop"
+    },
+    {
+        id: 18,
+        name: "Like",
+        path: "/Like"
+    },
 ]
 
 export default componentList
