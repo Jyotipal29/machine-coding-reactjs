@@ -32,6 +32,7 @@ import SearchFilterPagination from "./components/sort-filter-pagination";
 import ProgressBar from "./components/progressbar/index";
 import DragAndDrop from "./components/draganddrop/index";
 import Like from "./components/likebutton/index";
+import Password from "./components/passwordgenerator/index";
 function App() {
   return (
     <>
@@ -79,6 +80,7 @@ function App() {
           <Route exact path="/ProgressBar" element={<ProgressBar />} />
           <Route exact path="/DragAndDrop" element={<DragAndDrop />} />
           <Route exact path="/Like" element={<Like />} />
+          <Route exact path="/Password" element={<Password />} />
           <Route
             exact
             path="/SearchFilterPagination"

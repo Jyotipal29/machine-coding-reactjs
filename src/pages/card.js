@@ -90,6 +90,11 @@ const componentList = [
         name: "Like",
         path: "/Like"
     },
+    {
+        id: 19,
+        name: "Password",
+        path: "/Password"
+    },
 ]
 
 export default componentList
