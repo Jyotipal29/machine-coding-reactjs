@@ -33,6 +33,7 @@ import ProgressBar from "./components/progressbar/index";
 import DragAndDrop from "./components/draganddrop/index";
 import Like from "./components/likebutton/index";
 import Password from "./components/passwordgenerator/index";
+import GridLight from "./components/gridlights";
 function App() {
   return (
     <>
@@ -81,6 +82,7 @@ function App() {
           <Route exact path="/DragAndDrop" element={<DragAndDrop />} />
           <Route exact path="/Like" element={<Like />} />
           <Route exact path="/Password" element={<Password />} />
+          <Route exact path="/gridlight" element={<GridLight />} />
           <Route
             exact
             path="/SearchFilterPagination"

@@ -95,6 +95,11 @@ const componentList = [
         name: "Password",
         path: "/Password"
     },
+    {
+        id: 20,
+        name: "Grid Light",
+        path: "/gridlight"
+    },
 ]
 
 export default componentList
