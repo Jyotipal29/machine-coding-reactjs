@@ -100,6 +100,31 @@ const componentList = [
         name: "Grid Light",
         path: "/gridlight"
     },
+    {
+        id: 21,
+        name: "Job Post",
+        path: "/jobpost"
+    },
+    {
+        id: 22,
+        name: "Breadcrum",
+        path: "/breadcrum"
+    },
+    {
+        id: 23,
+        name: "OTP Login",
+        path: "/otplogin"
+    },
+    {
+        id: 24,
+        name: "Multi Select Search",
+        path: "/multiselectsearch"
+    },
+    {
+        id: 25,
+        name: "Stepper",
+        path: "/stepper"
+    },
 ]
 
 export default componentList

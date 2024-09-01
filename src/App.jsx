@@ -34,6 +34,11 @@ import DragAndDrop from "./components/draganddrop/index";
 import Like from "./components/likebutton/index";
 import Password from "./components/passwordgenerator/index";
 import GridLight from "./components/gridlights";
+import Jobpost from "./components/jobpost";
+import BreadCrum from "./components/breadcrum";
+import OtpLogin from "./components/otplogin";
+import MultiSelectSearch from "./components/multiselectsearch";
+import Stepper from "./components/stepper";
 function App() {
   return (
     <>
@@ -83,6 +88,15 @@ function App() {
           <Route exact path="/Like" element={<Like />} />
           <Route exact path="/Password" element={<Password />} />
           <Route exact path="/gridlight" element={<GridLight />} />
+          <Route exact path="/jobpost" element={<Jobpost />} />
+          <Route exact path="/breadcrum" element={<BreadCrum />} />
+          <Route exact path="/otplogin" element={<OtpLogin />} />
+          <Route exact path="/stepper" element={<Stepper />} />
+          <Route
+            exact
+            path="/multiselectsearch"
+            element={<MultiSelectSearch />}
+          />
           <Route
             exact
             path="/SearchFilterPagination"
