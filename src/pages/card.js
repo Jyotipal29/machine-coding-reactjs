@@ -125,6 +125,14 @@ const componentList = [
         name: "Stepper",
         path: "/stepper"
     },
+   
+    // todo
+    //infite scroll
+    //analog clock
+    //search with debounce
+    //image gallery with lazy loadiing 
+    //chat app 
+    //drag and drop
 ]
 
 export default componentList
