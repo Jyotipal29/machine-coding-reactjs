@@ -35,7 +35,6 @@ const Folder = () => {
     setExp(finalTree);
   };
 
-  console.log(exp, "folder");
   return (
     <div className="container mx-auto">
       <Comp exp={exp} handleInsertNode={handleInsertNode} />
@@ -62,7 +61,6 @@ const Comp = ({ exp, handleInsertNode }) => {
 
   const onAddFolder = (e) => {
     if (e.keyCode === 13 && e.target.value) {
-      console.log("here");
       //ad logic
       handleInsertNode(exp.id, e.target.value, showInput.isFolder);
       setShowInput({ ...showInput, visible: false });

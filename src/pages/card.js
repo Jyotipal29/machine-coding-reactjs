@@ -125,14 +125,39 @@ const componentList = [
         name: "Stepper",
         path: "/stepper"
     },
+    {
+        id: 26,
+        name: "Dropdown",
+        path: "/dropdown"
+    },
+    {
+        id: 27,
+        name: "Paginate",
+        path: "/paginate"
+    },
+   
+    {
+        id: 28,
+        name: "Trello",
+        path: "/trello"
+    },
+    {
+        id: 29,
+        name: "Stop Watch",
+        path: "/stopwatch"
+    },
+    {
+        id: 30,
+        name: "traficlight",
+        path: "/trafic"
+    },
    
     // todo
-    //infite scroll
+    
     //analog clock
-    //search with debounce
-    //image gallery with lazy loadiing 
+    
+  
     //chat app 
-    //drag and drop
 ]
 
 export default componentList

@@ -8,10 +8,7 @@ const useGeneratePassword = () => {
   const generatePassword = (checkBox, charLength) => {
     let charset = "";
     let generatedPassword = "";
-    console.log(checkBox);
     const valueToInlcude = checkBox.filter((item) => item.state);
-
-    console.log(valueToInlcude);
 
     if (valueToInlcude.length === 0) {
       setError("select at least one options");
@@ -47,7 +44,6 @@ const useGeneratePassword = () => {
       let randomIndex = Math.floor(Math.random() * charset.length);
 
       generatedPassword += charset[randomIndex];
-      console.log(generatedPassword);
     }
 
     setPassword(generatedPassword);

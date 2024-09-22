@@ -79,7 +79,6 @@ const DragAndDrop = () => {
         {/* <h2>{columnName.charAt(0).toUpperCase() + columnName.slice(1)}</h2> */}
         <h2>{columnName}</h2>
         {columns[columnName]?.map((item, index) => {
-          console.log(item, "item");
           return (
             item && (
               <div

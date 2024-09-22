@@ -25,9 +25,7 @@ const Prac = () => {
   const [one, setOne] = useState(0);
   const [two, setTwo] = useState(1);
 
-  const func = useCallback(() => {
-    console.log("jyoti");
-  }, [two]);
+  const func = useCallback(() => {}, [two]);
 
   return (
     <div>

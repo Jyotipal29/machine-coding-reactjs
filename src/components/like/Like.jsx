@@ -7,7 +7,6 @@ const Like = () => {
   const likeHandler = () => {
     setLoading(true);
     setTimeout(() => {
-      console.log("liked");
       setIsLiked(true);
       setLoading(false);
     }, 1000);

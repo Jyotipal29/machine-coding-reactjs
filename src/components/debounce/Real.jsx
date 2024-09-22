@@ -21,7 +21,6 @@ const Real = () => {
       }
     );
 
-    console.log(data);
   };
 
   useEffect(() => {

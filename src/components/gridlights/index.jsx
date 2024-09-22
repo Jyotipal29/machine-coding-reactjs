@@ -10,7 +10,6 @@ const GridLight = () => {
   const [isDeactivating, setIsDeactivating] = useState(false);
 
   const deactivatecells = () => {
-    console.log("here");
     setIsDeactivating(true);
     const timer = setInterval(() => {
       setIsClicked((isClciked) => {
@@ -27,7 +26,6 @@ const GridLight = () => {
     }, 300);
   };
   const clickHandler = (index) => {
-    console.log(index);
     let newClicked = [...isClicked, index];
 
     setIsClicked(newClicked);
@@ -64,7 +62,6 @@ const GridLight = () => {
 export default GridLight;
 
 const Cell = ({ value, onClick, isDisabled, fill }) => {
-  console.log(isDisabled);
   return (
     <div
       className=" w-[200px] h-[200px] m-5 cursor-pointer"

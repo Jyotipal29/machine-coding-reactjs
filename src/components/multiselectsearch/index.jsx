@@ -1,31 +1,100 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./style.css";
+
+// const myDebounce = (cb, delay) => {
+//   let timer = 0;
+//   return function (...args) {
+//     if (timer) clearTimeout(timer);
+
+//     timer = setTimeout(() => {
+//       cb(...args);
+//     }, delay);
+//   };
+// };
+
+// const myDebounce = (cb, delay) => {
+//   let timer = 0;
+//   return function (...args) {
+//     if (timer) clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       cb(...args);
+//     }, delay);
+//   };
+// };
+
+const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay, value]);
+
+  return debouncedValue;
+};
 const MultiSelectSearch = () => {
   const [search, setSearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [selectedUsers, setSelectedUsers] = useState([]);
-  const getUser = async () => {
-    if (search.trim() === "") {
-      setSuggestions([]);
+  // const getUser = useRef(
+  //   myDebounce(async (search) => {
+  //     if (search.trim() === "") {
+  //       setSuggestions([]);
+  //       return;
+  //     }
+  //     fetch(`https://dummyjson.com/users/search?q=${search}`)
+  //       .then((res) => res.json())
+  //       .then((data) => setSuggestions(data.users))
+  //       .catch((err) => console.log(err));
+  //   }, 500)
+  // ).current;
+  // useEffect(() => {
+  //   // getUser();
+  //   getUser(search);
+  // }, [search]);
+  // const keyDownHandler = () => {
+  //   getUser();
+  // };
+  // const getUser = useRef(
+  //   myDebounce((search) => {
+  //     if (search.trim() === "") {
+  //       return;
+  //     } else {
+  //       fetch(`https://dummyjson.com/users/search?q=${search}`)
+  //         .then((res) => res.json())
+  //         .then((data) => setSuggestions(data.users))
+  //         .catch((err) => console.log(err));
+  //     }
+  //   }, 500)
+  // ).current;
+
+  // useEffect(() => {
+  //   getUser(search);
+  // }, [search]);
+
+  const debouncedValue = useDebounce(search, 500);
+  const getUsers = () => {
+    if (debouncedValue.trim() === "") {
       return;
     }
-    fetch(`https://dummyjson.com/users/search?q=${search}`)
+    fetch(`https://dummyjson.com/users/search?q=${debouncedValue}`)
       .then((res) => res.json())
       .then((data) => setSuggestions(data.users))
       .catch((err) => console.log(err));
   };
 
-  const keyDownHandler = () => {
-    getUser();
-  };
-  console.log(suggestions);
+  useEffect(() => {
+    getUsers(debouncedValue);
+  }, [debouncedValue]);
 
   const handleSelectUser = (user) => {
     setSelectedUsers([...selectedUsers, user.firstName + user.lastName]);
     setSuggestions([]);
   };
 
-  console.log(selectedUsers, "selected users");
 
   const removeHandler = (user) => {
     let newSelectedUsers = selectedUsers.filter((item) => item != user);
@@ -71,7 +140,7 @@ const MultiSelectSearch = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="enter user name"
-              onKeyDown={keyDownHandler}
+              // onKeyDown={keyDownHandler}
               style={{ outline: "none" }}
             />
           </div>

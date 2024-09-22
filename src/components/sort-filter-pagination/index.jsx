@@ -16,28 +16,22 @@ const SearchFilterPagination = () => {
     if (data.products && data.products.length > 0) {
       setProducts(data.products);
       const cat = data.products.map((item) => item.category);
-      console.log(cat, "cat");
       const unique = [...new Set(cat)];
-      console.log(unique, "cat");
       setCategory(unique);
     }
   };
-
-  console.log(category, "category");
 
   useEffect(() => {
     getProduct();
   }, []);
 
   const transformedProducts = () => {
-    console.log(query, "query");
     let newProducts = products;
 
     newProducts.sort((a, b) =>
       sortVlaue === "asc" ? a.price - b.price : b.price - a.price
     );
 
-    console.log(cate, "cate");
     newProducts = products.filter((item) =>
       item.category.toLowerCase().includes(cate.toLowerCase())
     );
@@ -47,22 +41,14 @@ const SearchFilterPagination = () => {
     // }
 
     if (query && query.length > 0) {
-      console.log(query);
       newProducts = products.filter((prod) =>
         prod.title.toLowerCase().includes(query.toLowerCase())
-      );
-      console.log(
-        (newProducts = products.filter((prod) =>
-          prod.title.toLowerCase().includes(query.toLowerCase())
-        )),
-        "ndinweivnwviren"
       );
     }
 
     return newProducts;
   };
 
-  console.log(transformedProducts());
   return (
     <div className="container">
       <h2 className="heading">sort filter and pagination</h2>

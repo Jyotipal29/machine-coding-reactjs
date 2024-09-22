@@ -106,9 +106,6 @@ const Search = () => {
     return data.filter((item) => item.tags.includes(fil));
   };
 
-  console.log(filteredVideo());
-
-  console.log(text);
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "center" }}>

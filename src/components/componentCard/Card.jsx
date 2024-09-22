@@ -2,7 +2,6 @@
 import {  useNavigate } from "react-router-dom";
 const Card = ({ item }) => {
   const navigate = useNavigate();
-  console.log(item, "item");
   return (
     <div className="w-[300px] h-[250px] bg-white border border-gray-200 shadow-md">
       {/* <Link to={`${item.path}`}> */}

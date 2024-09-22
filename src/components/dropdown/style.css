@@ -1,0 +1,29 @@
+.container{
+    max-width: 1000px;
+    margin: 100px auto;
+}
+.list-dropdown{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:start;
+    gap:10px;
+}
+.dropdown-wrapper{
+
+    border:1px solid black;
+    max-width: 300px;
+    padding:10px;
+   width: 100%;
+}
+
+.dropdown{
+ width: 100%;
+outline: none;
+font-size: 20px;
+}
+
+.dropdown-option{
+
+    font-size: 20px;
+}

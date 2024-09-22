@@ -39,6 +39,11 @@ import BreadCrum from "./components/breadcrum";
 import OtpLogin from "./components/otplogin";
 import MultiSelectSearch from "./components/multiselectsearch";
 import Stepper from "./components/stepper";
+import Dropdown from "./components/dropdown";
+import Paginate from "./components/paginate";
+import Trello from "./components/trello";
+import StopWatch from "./components/stopwatch";
+import Trafic from "./components/trafic";
 function App() {
   return (
     <>
@@ -102,6 +107,11 @@ function App() {
             path="/SearchFilterPagination"
             element={<SearchFilterPagination />}
           />
+          <Route exact path="/dropdown" element={<Dropdown />} />
+          <Route exact path="/paginate" element={<Paginate />} />
+          <Route exact path="/trello" element={<Trello />} />
+          <Route exact path="/stopwatch" element={<StopWatch />} />
+          <Route exact path="/trafic" element={<Trafic />} />
         </Routes>
       </Router>
     </>

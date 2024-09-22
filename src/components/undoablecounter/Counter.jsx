@@ -7,7 +7,6 @@ const Counter = () => {
   const [undoHistory, setUndoHistory] = useState([]);
 
   const perform = (value, action) => {
-    console.log(value, action);
     setCounter(value);
     const prevValue = counter;
     setHistory([{ prevValue, value, action }, ...history]);
@@ -21,7 +20,6 @@ const Counter = () => {
 
   const onRedo = () => {
     const [latest, ...allhistory] = undoHistory;
-    console.log(latest, "lates");
     // setCounter(latest.value);
     setUndoHistory([latest, ...undoHistory]);
     setHistory(allhistory);

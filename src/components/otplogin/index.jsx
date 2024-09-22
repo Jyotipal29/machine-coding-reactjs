@@ -20,12 +20,9 @@ const OtpLogin = () => {
 
     setShowOtpInput(true);
 
-    console.log(phoneNumber);
   };
 
-  const loginHandler = () => {
-    console.log("login");
-  };
+  const loginHandler = () => {};
 
   const otpChangeHandler = (index, e) => {
     const value = e.target.value;
