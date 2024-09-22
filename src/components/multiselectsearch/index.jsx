@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 
 // const myDebounce = (cb, delay) => {
@@ -94,7 +94,6 @@ const MultiSelectSearch = () => {
     setSelectedUsers([...selectedUsers, user.firstName + user.lastName]);
     setSuggestions([]);
   };
-
 
   const removeHandler = (user) => {
     let newSelectedUsers = selectedUsers.filter((item) => item != user);

@@ -151,6 +151,22 @@ const componentList = [
         name: "traficlight",
         path: "/trafic"
     },
+    {
+        id: 31,
+        name: "Typeahead",
+        path: "/typeahead"
+    },
+    {
+        id: 32,
+        name: "Nested Comments",
+        path: "/comment"
+    },
+
+    {
+        id: 33,
+        name: "Quize",
+        path: "/quize"
+    },
    
     // todo
     

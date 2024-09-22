@@ -43,7 +43,10 @@ import Dropdown from "./components/dropdown";
 import Paginate from "./components/paginate";
 import Trello from "./components/trello";
 import StopWatch from "./components/stopwatch";
+import Typeahead from "./components/typeahed";
 import Trafic from "./components/trafic";
+import Comments from "./components/nestedcomments";
+import Quiz from "./components/quize";
 function App() {
   return (
     <>
@@ -112,6 +115,9 @@ function App() {
           <Route exact path="/trello" element={<Trello />} />
           <Route exact path="/stopwatch" element={<StopWatch />} />
           <Route exact path="/trafic" element={<Trafic />} />
+          <Route exact path="/typeahead" element={<Typeahead />} />
+          <Route exact path="/comment" element={<Comments />} />
+          <Route exact path="/quize" element={<Quiz />} />
         </Routes>
       </Router>
     </>
