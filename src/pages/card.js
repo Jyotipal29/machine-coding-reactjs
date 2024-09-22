@@ -167,6 +167,11 @@ const componentList = [
         name: "Quize",
         path: "/quize"
     },
+    {
+        id: 34,
+        name: "Poll",
+        path: "/poll"
+    },
    
     // todo
     

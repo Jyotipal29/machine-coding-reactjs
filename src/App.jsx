@@ -47,6 +47,7 @@ import Typeahead from "./components/typeahed";
 import Trafic from "./components/trafic";
 import Comments from "./components/nestedcomments";
 import Quiz from "./components/quize";
+import Poll from "./components/poll";
 function App() {
   return (
     <>
@@ -118,6 +119,7 @@ function App() {
           <Route exact path="/typeahead" element={<Typeahead />} />
           <Route exact path="/comment" element={<Comments />} />
           <Route exact path="/quize" element={<Quiz />} />
+          <Route exact path="/poll" element={<Poll />} />
         </Routes>
       </Router>
     </>
