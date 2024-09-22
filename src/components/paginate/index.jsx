@@ -1,78 +1,84 @@
 import { useState } from "react";
 
 const Paginate = () => {
-  let maxPage = 10;
-  const [currentPage, setCurrentPage] = useState(1);
-  let limit = 42;
+  const arr = Array.from({ length: 42 }, (_, index) => index + 1);
+  const [currPage, setCurrPage] = useState(arr[0]);
+  const [range, setRange] = useState(arr.slice(0, 10));
+  console.log(Math.min(42, 5));
 
-  const arr = Array.from({ length: limit }, (_, i) => i + 1);
+  const getRange = (num) => {
+    setCurrPage(num);
+    const delta = 5;
+    let start = Math.max(0, num - delta - 1);
+    let end = Math.min(arr.length, num + delta);
 
-  const getDisplayedPages = () => {
-    let startPage = Math.max(1, currentPage - Math.floor(maxPage / 2));
-    let endPage = Math.min(limit, startPage + maxPage - 1);
-
-    // Adjust if we're near the end to always show 10 pages
-    if (endPage - startPage < maxPage - 1) {
-      startPage = Math.max(1, endPage - maxPage + 1);
+    setRange(arr.slice(start, end));
+  };
+  const prevHandler = () => {
+    let newRange = currPage - 1;
+    console.log(newRange, "newrNAG");
+    if (newRange >= 1) {
+      getRange(newRange);
     }
-
-    return arr.slice(startPage - 1, endPage);
+  };
+  const nextHandler = () => {
+    let newRange = currPage + 1;
+    if (newRange <= arr.length) {
+      getRange(newRange);
+    }
   };
 
+  console.log(range, "range");
   return (
     <div className="container">
-      <h1>pagination</h1>
+      {/* <h1>pagination</h1>s */}
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          padding: "10px",
-          flexWrap: "wrap",
-        }}
-      >
+      <div>
         <button
-          disabled={currentPage === 1}
-          onClick={() => {
-            setCurrentPage((currentPage) => currentPage - 1);
-          }}
           style={{
-            padding: "10px",
-            border: "1px solid black",
-            margin: "10px",
-            backgroundColor: "green",
+            border: "1px solid #ccc",
+            width: "100px",
+            fontSize: "18px",
+            textTransform: "uppercase",
+            padding: "5px 10px",
           }}
+          disabled={currPage === 1}
+          onClick={prevHandler}
+          // onClick={() => setCurrPage((currPage) => currPage - 1)}
         >
-          previous
+          prev
         </button>
-
-        {getDisplayedPages().map((page, index) => (
+        {range[0] > arr[0] && <div>...</div>}
+        {range.map((item) => (
           <button
-            key={index}
+            key={item}
             style={{
-              padding: "10px",
-              border: "1px solid black",
+              border: "1px solid #ccc",
+
+              fontSize: "18px",
+              textTransform: "uppercase",
+              padding: "5px 10px",
               margin: "10px",
-              backgroundColor: currentPage === index + 1 ? "green" : "",
+              backgroundColor: currPage === item ? "green" : "",
             }}
-            onClick={() => setCurrentPage(page)}
+            onClick={() => getRange(item)}
           >
-            {page}
+            {item}
           </button>
         ))}
 
+        {arr[arr.length - 1] > range[range.length - 1] && <div>...</div>}
         <button
           style={{
-            backgroundColor: "green",
-            padding: "10px",
-            border: "1px solid black",
-            margin: "10px",
+            border: "1px solid #ccc",
+            width: "100px",
+            fontSize: "18px",
+            textTransform: "uppercase",
+            padding: "5px 10px",
           }}
-          disabled={currentPage === limit}
-          onClick={() => {
-            // setCurrentPage(currentPage + 1);
-            setCurrentPage((currentPage) => currentPage + 1);
-          }}
+          disabled={currPage === arr.length}
+          // onClick={() => setCurrPage((currPage) => currPage + 1)}
+          onClick={nextHandler}
         >
           next
         </button>
